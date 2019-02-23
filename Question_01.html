@@ -31,7 +31,9 @@
 
         Vehicle.printVehicleNameInner();
 
-
+        execute.call(vehicle);
+        var execute1 = Vehicle.printVehicleNameInner().bind(Vehicle);
+        execute1();
 
     </script>
 
