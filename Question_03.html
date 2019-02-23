@@ -3,6 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <script type="text/javascript">
+        function fetchUsers() {
+            fetch('https://api.github.com/users').then(function (response) {
+                return response.json();
+            }).then(function (json) {
+                console.log(json)
+            });
+        }
+
+        fetchUsers();
+
+        function fetchUsers1() {
+            return fetch('https://api.github.com/users')
+                .then(response => response.json());
+        }
+
+        fetchUsers1().then(function (json) {
+            console.log(json);
+        });
+
+    </script>
+
 </head>
 <body>
 
