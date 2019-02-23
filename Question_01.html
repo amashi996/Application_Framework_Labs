@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <script>
+    <script type="text/javascript">
 
         var vehicleName = 'Toyota';
         
         function printVehicleNameOuter() {
             console.log(this.vehicleName);
         }
+
+        console.log(this);
+        printVehicleNameOuter();
+
+        var Vehicle = {
+            vehicleName : 'Nissan',
+            //printVehicleNameInner : printVehicleNameOuter
+
+            printVehicleNameInner : function () {
+                return function () {
+                    console.log(this.vehicleName);
+                }
+            }
+        };
+
+        var execute = Vehicle.printVehicleNameInner();
+        execute();
+
+        Vehicle.printVehicleNameInner();
 
     </script>
 
