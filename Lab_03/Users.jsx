@@ -36,7 +36,7 @@ export default class Users extends Component{
                         {
                             users.map(user =>{
                                 return
-                                <User key={user.id} user={user}/>
+                                <User key={user.id} user={user.name}/>
                             })
                         }
                     </td>
