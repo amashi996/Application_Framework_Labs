@@ -9,8 +9,7 @@ import User from './User.jsx';
 
 export default class Users extends Component{
     static get propTypes(){
-        return{
-            users: PropTypes.array
+        return{users: PropTypes.array
         }
     }
 
@@ -21,8 +20,7 @@ export default class Users extends Component{
     render() {
         const {users} = this.props;
 
-        return
-        <div>
+        return <div>
             <table>
                 <thead>
                 <tr>
@@ -35,8 +33,7 @@ export default class Users extends Component{
                     <td>
                         {
                             users.map(user =>{
-                                return
-                                <User key={user.id} user={user.name}/>
+                                return <User key={user.id} user={user}/>
                             })
                         }
                     </td>

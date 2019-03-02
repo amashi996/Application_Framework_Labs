@@ -26536,7 +26536,7 @@ function (_Component) {
         onChange: function onChange(event) {
           return _this.onNameChange(event);
         }
-      }), _react.default.createElement("button", {
+      }), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("button", {
         type: "submit"
       }, "Add")));
     }
@@ -26626,14 +26626,12 @@ function (_Component) {
     key: "render",
     value: function render() {
       var users = this.props.users;
-      return;
-
-      _react.default.createElement("div", null, _react.default.createElement("table", null, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "ID"), _react.default.createElement("th", null, "NAME"))), _react.default.createElement("tbody", null, _react.default.createElement("tr", null, _react.default.createElement("td", null, users.map(function (user) {
+      return _react.default.createElement("div", null, _react.default.createElement("table", null, _react.default.createElement("thead", null, _react.default.createElement("tr", null, _react.default.createElement("th", null, "ID"), _react.default.createElement("th", null, "NAME"))), _react.default.createElement("tbody", null, _react.default.createElement("tr", null, _react.default.createElement("td", null, users.map(function (user) {
         return;
 
         _react.default.createElement(_User.default, {
           key: user.id,
-          user: user.name
+          user: user
         });
       }))))));
     }
@@ -26769,7 +26767,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32801" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37001" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

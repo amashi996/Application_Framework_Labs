@@ -36,6 +36,8 @@ export default class AddUser extends Component{
             <form onSubmit={event => this.onSubmit(event)}>
                 <label>Name : </label>
                 <input type="text" onChange={event => this.onNameChange(event)}/>
+                <br/>
+                <br/>
                 <button type="submit">Add</button>
             </form>
         </div>;
